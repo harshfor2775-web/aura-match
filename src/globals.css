@@ -6,76 +6,50 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
-
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
-
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
-
     --radius: 0.5rem;
-
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -88,14 +62,67 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-}
+.dark .bg-white { background-color: #111827 !important; }
+.dark .bg-slate-50 { background-color: #0b1220 !important; }
+.dark .bg-slate-100 { background-color: #1f2937 !important; }
+.dark .bg-slate-900 { background-color: #070b13 !important; }
+.dark .text-slate-800, .dark .text-slate-700 { color: #e2e8f0 !important; }
+.dark .text-slate-600, .dark .text-slate-500 { color: #aab7c8 !important; }
+.dark .text-slate-400 { color: #8492a6 !important; }
+.dark .border-slate-100, .dark .border-slate-200 { border-color: #263244 !important; }
+.dark input:not([type="checkbox"]), .dark textarea, .dark select { background-color: #111827; border-color: #374151; color: #e2e8f0; }
+.dark ::placeholder { color: #8492a6; }
+.dark .hover\\:bg-slate-50:hover, .dark .hover\\:bg-slate-100:hover { background-color: #1f2937 !important; }
+.dark .hover\\:border-slate-300:hover { border-color: #475569 !important; }
+.dark .bg-indigo-50 { background-color: #20204b !important; }
+.dark .text-indigo-800, .dark .text-indigo-900 { color: #c7d2fe !important; }
+.dark .border-indigo-100 { border-color: #34345d !important; }
+.dark .bg-emerald-50 { background-color: #0c302b !important; }
+.dark .text-emerald-800 { color: #a7f3d0 !important; }
+.dark .border-emerald-100 { border-color: #155344 !important; }
+.dark .bg-amber-50 { background-color: #382811 !important; }
+.dark .text-amber-800 { color: #fde68a !important; }
+.dark .border-amber-100 { border-color: #5b421c !important; }
+.dark .bg-sky-50, .dark .bg-violet-50 { background-color: #20263a !important; }
+.dark .bg-orange-100, .dark .bg-rose-100, .dark .bg-blue-100, .dark .bg-purple-100, .dark .bg-teal-100, .dark .bg-pink-100 { background-color: #263244 !important; }
+.dark .text-orange-700 { color: #fed7aa !important; }
+.dark .text-rose-700 { color: #fecdd3 !important; }
+.dark .text-blue-700 { color: #bfdbfe !important; }
+.dark .text-purple-700 { color: #e9d5ff !important; }
+.dark .text-teal-700 { color: #99f6e4 !important; }
+.dark .text-pink-700 { color: #fbcfe8 !important; }
+.dark .bg-gradient-to-br { background-image: linear-gradient(to bottom right, #171b39, #0c302b) !important; }
+.dark .bg-white\\/70 { background-color: rgb(17 24 39 / 0.7) !important; }
+.dark .bg-white\\/15 { background-color: rgb(255 255 255 / 0.15) !important; }
+.dark .text-indigo-600 { color: #a5b4fc !important; }
+.dark .text-indigo-700 { color: #c7d2fe !important; }
+.dark .text-emerald-600 { color: #34d399 !important; }
+.dark .text-emerald-700 { color: #6ee7b7 !important; }
+.dark .text-amber-700 { color: #fcd34d !important; }
+.dark .text-white { color: #fff !important; }
+.dark .bg-indigo-600 { background-color: #4f46e5 !important; }
+.dark .bg-emerald-600 { background-color: #059669 !important; }
+.dark .bg-emerald-500 { background-color: #10b981 !important; }
+.dark .bg-emerald-50\\/50 { background-color: rgb(12 48 43 / 0.5) !important; }
+.dark .bg-amber-50\\/50 { background-color: rgb(56 40 17 / 0.5) !important; }
+.dark .bg-slate-900\\/40, .dark .bg-slate-900\\/35 { background-color: rgb(0 0 0 / 0.65) !important; }
+.dark .bg-slate-50 .bg-white { background-color: #111827 !important; }
+.dark .shadow-2xl { --tw-shadow-color: rgb(0 0 0 / 0.6); }
+.dark .focus\\:ring-indigo-100:focus { --tw-ring-color: #34345d !important; }
+.dark .hover\\:border-indigo-300:hover { border-color: #6366f1 !important; }
+.dark .border-indigo-300 { border-color: #6366f1 !important; }
+.dark .border-emerald-300 { border-color: #34d399 !important; }
+.dark .bg-rose-50 { background-color: #3b1d29 !important; }
+.dark .text-slate-200 { color: #e2e8f0 !important; }
+.dark .bg-slate-50.rounded-xl { background-color: #0b1220 !important; }
+.dark .bg-slate-50.rounded-xl .text-slate-700 { color: #e2e8f0 !important; }
+.dark .bg-indigo-50 .text-indigo-900 { color: #c7d2fe !important; }
+.dark .bg-emerald-50 .text-emerald-800 { color: #a7f3d0 !important; }
+.dark .bg-amber-50 .text-amber-800 { color: #fde68a !important; }
+.dark .bg-indigo-600.text-white, .dark .bg-emerald-600.text-white { color: #fff !important; }
+.dark .bg-indigo-600:hover { background-color: #4338ca !important; }
+.dark .bg-emerald-600:hover { background-color: #047857 !important; }
